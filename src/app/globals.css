@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 @tailwind utilities;
@@ -47,51 +47,6 @@
 
 body {
     font-family: "Inter", sans-serif;
-}
-
-.inter-thin {
-    font-family: "Inter", sans-serif;
-    font-weight: 100;
-}
-
-.inter-extralight {
-    font-family: "Inter", sans-serif;
-    font-weight: 200;
-}
-
-.inter-light {
-    font-family: "Inter", sans-serif;
-    font-weight: 300;
-}
-
-.inter-regular {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-}
-
-.inter-medium {
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
-}
-
-.inter-semibold {
-    font-family: "Inter", sans-serif;
-    font-weight: 600;
-}
-
-.inter-bold {
-    font-family: "Inter", sans-serif;
-    font-weight: 700;
-}
-
-.inter-extrabold {
-    font-family: "Inter", sans-serif;
-    font-weight: 800;
-}
-
-.inter-black {
-    font-family: "Inter", sans-serif;
-    font-weight: 900;
 }
 
 :root {
@@ -170,4 +125,108 @@ body {
     body {
         @apply bg-background text-foreground;
     }
+}
+
+.inter-thin {
+    font-family: "Inter", sans-serif;
+    font-weight: 100;
+}
+
+.inter-extralight {
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+}
+
+.inter-light {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+}
+
+.inter-regular {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+}
+
+.inter-medium {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.inter-semibold {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+}
+
+.inter-bold {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+}
+
+.inter-extrabold {
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+}
+
+.inter-black {
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+}
+
+.roboto {
+    font-family: "Roboto", sans-serif;
+}
+
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+}
+
+.roboto-extralight {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+}
+
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+.roboto-semibold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+}
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+.roboto-extrabold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+}
+
+.roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+}
+
+[data-collapsible="icon"] [data-slot="sidebar-menu-button"] {
+    width: 100% !important;
+    padding: 0 !important;
+}
+
+[data-collapsible="icon"] [data-slot="sidebar-menu-button"] a {
+    width: 100% !important;
+    justify-content: center !important;
 }
