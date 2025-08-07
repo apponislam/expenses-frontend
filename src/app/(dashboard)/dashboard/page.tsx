@@ -1,3 +1,4 @@
+import { ChartBarWithLines } from "@/components/rvenue-activity-chart-copy";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { ChartBarMultiple } from "@/components/user-activity-chart";
@@ -56,7 +57,7 @@ const page = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-white p-5 rounded-[12px]">
+            <div className="bg-white p-5 rounded-[12px] mb-8">
                 <div className="flex justify-between items-center mb-[14px]">
                     <p className="inter-medium text-[14px] text-[#454B60]">User Activity</p>
                     <div className="flex items-center gap-[14px]">
@@ -73,6 +74,30 @@ const page = () => {
 
                 <div className="h-[264px] overflow-hidden mb-8">
                     <ChartBarMultiple></ChartBarMultiple>
+                </div>
+            </div>
+            <div className="flex items-stretch gap-5">
+                <div className="bg-white p-5 rounded-[12px] flex-1">
+                    <div className="flex justify-between items-center mb-[14px]">
+                        <p className="inter-medium text-[14px] text-[#454B60]">Revenue</p>
+                        <div className="flex items-center gap-[14px]">
+                            <div className="flex items-center gap-3">
+                                <div className="w-2 h-2 bg-[#00A62C]"></div>
+                                <p className="inter-regular text-[12px]">Subscriptions Revenue</p>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <div className="w-2 h-2 bg-[#FFE100]"></div>
+                                <p className="inter-regular text-[12px]">Advertisement Revenue</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="h-[190px] overflow-hidden mb-8">
+                        <ChartBarWithLines></ChartBarWithLines>
+                    </div>
+                </div>
+                <div className="bg-white p-5 rounded-[12px] w-[350px] flex flex-col">
+                    <div className="flex-1"></div>
                 </div>
             </div>
         </div>
