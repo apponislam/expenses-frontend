@@ -28,8 +28,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                                 <div className="flex items-center gap-3 text-left">
                                     <Image src="/people.svg" alt="User Photo" width={58} height={58} className="w-[30px] h-[30px] md:w-[58px] md:h-[58px]" />
                                     <div>
-                                        <p className="text-2xl mb-2">John Doe</p>
-                                        <h6 className="text-[14px]">Admin</h6>
+                                        <p className="text-2xl mb-2 hidden md:block">John Doe</p>
+                                        <h6 className="text-[14px] hidden md:block">Admin</h6>
                                     </div>
                                 </div>
                             </DropdownMenuTrigger>

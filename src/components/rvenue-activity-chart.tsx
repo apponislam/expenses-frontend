@@ -1,56 +1,80 @@
 "use client";
 
-import { BarChart, Bar, Line, XAxis, YAxis, ResponsiveContainer } from "recharts";
-import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartConfig } from "@/components/ui/chart";
+import { ComposedChart, Line, Bar, XAxis, YAxis, Tooltip as RechartsTooltip, ResponsiveContainer } from "recharts";
 
-export const description = "Bar and Two Line Chart";
+import { ChartContainer, ChartTooltipContent, ChartConfig } from "@/components/ui/chart";
 
+export const description = "Bar + Two Lines Chart (Revenue Overview)";
+
+// Updated Data
 const chartData = [
-    { month: "Jan", desktop: 4700, total: 5500, growth: 3200 },
-    { month: "Feb", desktop: 3050, total: 5050, growth: 3100 },
-    { month: "Mar", desktop: 2370, total: 3570, growth: 2900 },
-    { month: "Apr", desktop: 730, total: 2630, growth: 2100 },
-    { month: "May", desktop: 2090, total: 3390, growth: 2700 },
-    { month: "Jun", desktop: 2140, total: 3540, growth: 3000 },
-    { month: "Jul", desktop: 1980, total: 3580, growth: 2800 },
-    { month: "Aug", desktop: 2250, total: 3750, growth: 3100 },
-    { month: "Sep", desktop: 2450, total: 4250, growth: 3500 },
-    { month: "Oct", desktop: 2750, total: 4850, growth: 4100 },
-    { month: "Nov", desktop: 3000, total: 4900, growth: 4200 },
-    { month: "Dec", desktop: 2600, total: 4300, growth: 3900 },
+    { month: "Jan", revenue: 470000, subscriptions: 0, advertisements: 0 },
+    { month: "Feb", revenue: 460000, subscriptions: 305000, advertisements: 450000 },
+    { month: "Mar", revenue: 400000, subscriptions: 237000, advertisements: 357000 },
+    { month: "Apr", revenue: 350000, subscriptions: 73000, advertisements: 263000 },
+    { month: "May", revenue: 420000, subscriptions: 209000, advertisements: 339000 },
+    { month: "Jun", revenue: 450000, subscriptions: 214000, advertisements: 354000 },
+    { month: "Jul", revenue: 430000, subscriptions: 198000, advertisements: 358000 },
+    { month: "Aug", revenue: 470000, subscriptions: 225000, advertisements: 375000 },
+    { month: "Sep", revenue: 520000, subscriptions: 245000, advertisements: 425000 },
+    { month: "Oct", revenue: 580000, subscriptions: 275000, advertisements: 485000 },
+    { month: "Nov", revenue: 590000, subscriptions: 300000, advertisements: 490000 },
+    { month: "Dec", revenue: 540000, subscriptions: 260000, advertisements: 430000 },
 ];
 
+// Config for labels & colors
 const chartConfig = {
-    desktop: {
-        label: "Desktop Revenue",
-        color: "#4F46E5", // Indigo
-    },
-    total: {
+    revenue: {
         label: "Total Revenue",
-        color: "#F79009", // Amber
+        color: "#86B5EC", // Indigo bar
     },
-    growth: {
-        label: "Growth",
-        color: "#10B981", // Emerald
+    subscriptions: {
+        label: "Subscriptions Revenue",
+        color: "#FACC15", // Yellow line
+    },
+    advertisements: {
+        label: "Advertisement Revenue",
+        color: "#22C55E", // Green line
     },
 } satisfies ChartConfig;
 
-export function ChartBarWithLine() {
+export function ChartBarWithLines() {
     return (
         <ChartContainer config={chartConfig}>
-            <div className="h-[264px]">
+            <div className="h-[190px]">
                 <ResponsiveContainer width="100%" height="100%">
-                    <BarChart data={chartData} barSize={24} barGap={4}>
+                    <ComposedChart data={chartData} barSize={24} barGap={4}>
                         <XAxis dataKey="month" tickLine={false} axisLine={false} tickMargin={10} />
-                        <YAxis tickLine={false} axisLine={false} tickMargin={10} domain={[0, 6000]} ticks={[0, 1500, 3000, 4500, 6000]} />
-                        <ChartTooltip cursor={false} content={<ChartTooltipContent indicator="dashed" />} />
+                        <YAxis tickLine={false} axisLine={false} tickMargin={10} domain={[0, 600000]} ticks={[0, 150000, 300000, 450000, 600000]} />
+                        <RechartsTooltip cursor={false} content={<ChartTooltipContent indicator="dashed" />} />
 
-                        <Bar dataKey="desktop" fill={chartConfig.desktop.color} radius={[4, 4, 0, 0]} />
+                        {/* Bar: Total Revenue */}
+                        <Bar dataKey="revenue" fill={chartConfig.revenue.color} radius={[4, 4, 0, 0]} />
 
-                        <Line type="monotone" dataKey="total" stroke={chartConfig.total.color} strokeWidth={20} dot={{ r: 3 }} activeDot={{ r: 5 }} />
+                        {/* Line: Subscriptions Revenue */}
+                        <Line
+                            type="monotone"
+                            dataKey="subscriptions"
+                            stroke={chartConfig.subscriptions.color}
+                            strokeWidth={1}
+                            dot={({ cx, cy, index }) => {
+                                return <circle key={`dot-${index}`} cx={cx} cy={cy} r={4} fill="#7CB78B" stroke="#FFFFFF" strokeWidth={2} />;
+                            }}
+                            activeDot={{ r: 5 }}
+                        />
 
-                        <Line type="monotone" dataKey="growth" stroke={chartConfig.growth.color} strokeWidth={20} strokeDasharray="4 2" dot={{ r: 3 }} activeDot={{ r: 5 }} />
-                    </BarChart>
+                        {/* Line: Advertisement Revenue */}
+                        <Line
+                            type="monotone"
+                            dataKey="advertisements"
+                            stroke={chartConfig.advertisements.color}
+                            strokeWidth={1}
+                            dot={({ cx, cy, index }) => {
+                                return <circle key={`dot-${index}`} cx={cx} cy={cy} r={4} fill="#7CB78B" stroke="#FFFFFF" strokeWidth={2} />;
+                            }}
+                            activeDot={{ r: 5 }}
+                        />
+                    </ComposedChart>
                 </ResponsiveContainer>
             </div>
         </ChartContainer>
