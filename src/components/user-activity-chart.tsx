@@ -41,8 +41,8 @@ export function ChartBarMultiple() {
                         <XAxis dataKey="month" tickLine={false} axisLine={false} tickMargin={10} tickFormatter={(value) => value.slice(0, 3)} />
                         <YAxis tickLine={false} axisLine={false} tickMargin={10} ticks={[0, 1500, 3000, 4500, 6000]} domain={[0, 6000]} />
                         <ChartTooltip cursor={false} content={<ChartTooltipContent indicator="dashed" />} />
-                        <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
-                        <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
+                        <Bar dataKey="desktop" fill="var(--color-desktop)" radius={[4, 4, 0, 0]} />
+                        <Bar dataKey="mobile" fill="var(--color-mobile)" radius={[4, 4, 0, 0]} />
                     </BarChart>
                 </ResponsiveContainer>
             </div>
