@@ -7,10 +7,10 @@ import { usePathname } from "next/navigation";
 const items = [
     { title: "Dashboard", url: "/dashboard", icon: LayoutDashboard },
     { title: "User", url: "/dashboard/user", icon: UserRound },
-    { title: "Subscriptions", url: "/subscriptions", icon: LaptopMinimalCheck },
-    { title: "Advertising", url: "/advertising", icon: Megaphone },
-    { title: "Feedback", url: "/feedback", icon: ChartColumnIncreasing },
-    { title: "Terms & Conditions", url: "/terms", icon: Shield },
+    { title: "Subscriptions", url: "/dashboard/subscriptions", icon: LaptopMinimalCheck },
+    { title: "Advertising", url: "/dashboard/advertising", icon: Megaphone },
+    { title: "Feedback", url: "/dashboard/feedback", icon: ChartColumnIncreasing },
+    { title: "Terms & Conditions", url: "/dashboard/terms", icon: Shield },
 ];
 
 export function AppSidebar() {
