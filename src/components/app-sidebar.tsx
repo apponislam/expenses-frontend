@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 const items = [
     { title: "Dashboard", url: "/dashboard", icon: LayoutDashboard },
-    { title: "User", url: "/user", icon: UserRound },
+    { title: "User", url: "/dashboard/user", icon: UserRound },
     { title: "Subscriptions", url: "/subscriptions", icon: LaptopMinimalCheck },
     { title: "Advertising", url: "/advertising", icon: Megaphone },
     { title: "Feedback", url: "/feedback", icon: ChartColumnIncreasing },
