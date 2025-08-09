@@ -8,17 +8,6 @@ import Image from "next/image";
 const page = () => {
     return (
         <div className="mt-3 md:mt-6 mx-3">
-            {/* <div className="flex items-center gap-8">
-                <div className="bg-white p-[10px] rounded-[12px] w-1/2">
-                    <h1>hii</h1>
-                </div>
-                <div className="bg-white p-[10px] rounded-[12px] w-1/2">
-                    <h1>hii</h1>
-                </div>
-                <div className="bg-white p-[10px] rounded-[12px] w-full">
-                    <h1>hii</h1>
-                </div>
-            </div> */}
             <div className="grid gap-3 md:gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-12 mb-3 md:mb-6">
                 <div className="bg-white p-[10px] rounded-[12px] xl:col-span-3">
                     <p className="text-[20px] inter-medium mb-3">Total Users</p>

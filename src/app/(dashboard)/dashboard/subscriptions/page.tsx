@@ -111,7 +111,7 @@ const page = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 xl:gap-8 mb-3 md:mb-6 xl:mb-8">
                 <div className="bg-white p-5 rounded-[12px]">
                     <Tabs defaultValue="monthly" className="w-full">
-                        <div className="flex items-center justify-between">
+                        <div className="flex items-center justify-between flex-wrap gap-2">
                             <p className="inter-semibold">Revenue Overview</p>
                             <TabsList className="bg-transparent p-0 border-none shadow-none gap-2">
                                 <TabsTrigger value="week" className={tabClass}>
@@ -166,7 +166,7 @@ const page = () => {
             </div>
             <div className="bg-white p-5 rounded-[12px] mb-3 md:mb-6">
                 <Tabs defaultValue="week2" className="w-full">
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between flex-wrap gap-2">
                         <p className="inter-regular">Subscriptions List</p>
                         <TabsList className="bg-transparent p-0 border-none shadow-none gap-2">
                             <TabsTrigger value="week2" className={tabClass}>

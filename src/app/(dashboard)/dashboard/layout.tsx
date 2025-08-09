@@ -1,4 +1,5 @@
 import { AppSidebar } from "@/components/app-sidebar";
+import DynamicPageTitle from "@/components/helpers/DynamicPageTitle";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { Bell, Camera, LogOut, SquarePen } from "lucide-react";
@@ -18,7 +19,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <div className="flex items-center justify-between border-b border-[#F1F1F1] px-2 py-4 md:px-5 md:py-8 bg-white">
                     <div className="flex gap-2 items-center  w-full">
                         <SidebarTrigger className="md:hidden" />
-                        <p className="inter-regular md:text-2xl">Overview</p>
+                        {/* <p className="inter-regular md:text-2xl">{title}</p> */}
+                        <DynamicPageTitle />
                     </div>
                     <div className="flex items-center gap-3 md:gap-8  w-full justify-end">
                         <Bell />
