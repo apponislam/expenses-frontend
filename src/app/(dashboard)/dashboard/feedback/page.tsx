@@ -83,6 +83,10 @@ const page = () => {
             </div>
 
             <MessagesTableWithControls data={sampleMessages}></MessagesTableWithControls>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
+                <div></div>
+            </div>
         </div>
     );
 };

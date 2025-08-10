@@ -37,7 +37,7 @@ export default function MessagesTableWithControls({ data }: { data: MessageData[
     }, [filteredData, sortOrder]);
 
     return (
-        <div className="bg-white p-[10px] rounded-[12px]">
+        <div className="bg-white p-[10px] rounded-[12px] mb-3">
             <div className="flex items-center justify-between flex-wrap gap-3 mb-3">
                 <p className="inter-regular text-[18px]">Rating Distribution</p>
                 <div className="flex items-stretch gap-3 md:gap-7">
@@ -60,7 +60,7 @@ export default function MessagesTableWithControls({ data }: { data: MessageData[
                             ))}
                         </DropdownMenuContent>
                     </DropdownMenu>
-                    <div className="flex items-center border border-[#454B6066] rounded-[4px] px-[20px] w-[400px] max-w-md">
+                    <div className="flex items-center border border-[#454B6066] rounded-[4px] px-[20px] md:w-[400px] max-w-md">
                         <Search className="text-[#454B60] w-5 h-5" />
                         <Input type="search" placeholder="Search..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="flex-grow ml-2 p-0 py-0 bg-transparent placeholder:text-[#454B60] text-[#454B60] border-none focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0 shadow-none" />
                     </div>
