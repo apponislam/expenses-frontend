@@ -1,30 +1,26 @@
 import { AppSidebar } from "@/components/app-sidebar";
 import DynamicPageTitle from "@/components/helpers/DynamicPageTitle";
+import { FullscreenChecker } from "@/components/PathChecker";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { Bell, Camera, LogOut, SquarePen } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-    return (
-        <SidebarProvider
-            style={
-                {
-                    "--sidebar-width-icon": "58px",
-                } as React.CSSProperties
-            }
-        >
+    const normalLayout = (
+        <SidebarProvider style={{ "--sidebar-width-icon": "58px" } as React.CSSProperties}>
             <AppSidebar />
             <main className="bg-[#edf1f4] w-full">
                 <div className="flex items-center justify-between border-b border-[#F1F1F1] px-2 py-4 md:px-5 md:py-8 bg-white">
-                    <div className="flex gap-2 items-center  w-full">
+                    <div className="flex gap-2 items-center w-full">
                         <SidebarTrigger className="md:hidden" />
-                        {/* <p className="inter-regular md:text-2xl">{title}</p> */}
                         <DynamicPageTitle />
                     </div>
-                    <div className="flex items-center gap-3 md:gap-8  w-full justify-end">
-                        <Bell />
-
+                    <div className="flex items-center gap-3 md:gap-8 w-full justify-end">
+                        <Link href="/dashboard/notifications">
+                            <Bell />
+                        </Link>
                         <DropdownMenu>
                             <DropdownMenuTrigger className="border-0 focus:outline-none focus:ring-0">
                                 <div className="flex items-center gap-3 text-left">
@@ -36,13 +32,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                                 </div>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent className="w-[180px]">
-                                <DropdownMenuItem>
-                                    <Camera /> Change Photo
+                                <DropdownMenuItem asChild>
+                                    <Link href="/dashboard/user/changephoto" className="flex items-center gap-2">
+                                        <Camera /> Change Photo
+                                    </Link>
                                 </DropdownMenuItem>
                                 <DropdownMenuSeparator />
-                                <DropdownMenuItem>
-                                    <SquarePen className="text-[#D9BD7B]" />
-                                    Change Name
+                                <DropdownMenuItem asChild>
+                                    <Link href="/dashboard/user/changename" className="flex items-center gap-2">
+                                        <SquarePen className="text-[#D9BD7B]" />
+                                        Change Name
+                                    </Link>
                                 </DropdownMenuItem>
                                 <DropdownMenuSeparator />
                                 <DropdownMenuItem>
@@ -57,4 +57,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </main>
         </SidebarProvider>
     );
+
+    const fullscreenLayout = <div>{children}</div>;
+
+    return <FullscreenChecker normalLayout={normalLayout} fullscreenLayout={fullscreenLayout} />;
 }

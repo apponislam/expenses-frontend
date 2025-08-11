@@ -4,11 +4,12 @@ import { usePathname } from "next/navigation";
 
 const pageTitles: Record<string, string> = {
     "/dashboard": "Overview",
-    "/dashboard/user": "User",
-    "/dashboard/subscriptions": "Subscriptions",
-    "/dashboard/advertising": "Advertising",
-    "/dashboard/feedback": "Feedback",
-    "/dashboard/terms": "Terms & Conditions",
+    "/dashboard/user": "USER",
+    "/dashboard/subscriptions": "SUBSCRIPTIONS",
+    "/dashboard/advertising": "ADVERTISING",
+    "/dashboard/feedback": "FEEDBACK",
+    "/dashboard/terms": "TERMS & CONDITIONS",
+    "/dashboard/notifications": "NOTIFICATIONS",
 };
 
 export default function DynamicPageTitle() {
