@@ -37,7 +37,7 @@ export default function MessagesTableWithControls({ data }: { data: MessageData[
     }, [filteredData, sortOrder]);
 
     return (
-        <div className="bg-white p-[10px] rounded-[12px] mb-3">
+        <div className="bg-white p-[10px] rounded-[12px] mb-3 md:mb-6">
             <div className="flex items-center justify-between flex-wrap gap-3 mb-3">
                 <p className="inter-regular text-[18px]">Rating Distribution</p>
                 <div className="flex items-stretch gap-3 md:gap-7">
