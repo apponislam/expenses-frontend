@@ -1,4 +1,4 @@
-import MessagesTableWithControls from "@/components/rating-distribution-table";
+import MessagesTableWithControls from "@/components/tables/rating-distribution-table";
 import { Progress } from "@/components/ui/progress";
 import { Star } from "lucide-react";
 import Image from "next/image";
