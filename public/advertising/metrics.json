@@ -1,0 +1,29 @@
+{
+    "status": "success",
+    "message": "Metrics data fetched successfully",
+    "data": {
+        "week": [
+            { "date": "07/07/2025", "impression": 12345, "click": 456, "revenue": 7890 },
+            { "date": "08/07/2025", "impression": 15000, "click": 500, "revenue": 10200 },
+            { "date": "09/07/2025", "impression": 10000, "click": 320, "revenue": 6700 },
+            { "date": "10/07/2025", "impression": 13000, "click": 410, "revenue": 8500 },
+            { "date": "11/07/2025", "impression": 11000, "click": 380, "revenue": 7200 },
+            { "date": "12/07/2025", "impression": 16000, "click": 600, "revenue": 11500 },
+            { "date": "13/07/2025", "impression": 14000, "click": 470, "revenue": 9000 }
+        ],
+        "month": [
+            { "date": "Jan 2025", "impression": 320000, "click": 14500, "revenue": 198000 },
+            { "date": "Feb 2025", "impression": 280000, "click": 13000, "revenue": 176000 },
+            { "date": "Mar 2025", "impression": 350000, "click": 16500, "revenue": 210000 },
+            { "date": "Apr 2025", "impression": 300000, "click": 15000, "revenue": 195000 },
+            { "date": "May 2025", "impression": 370000, "click": 17500, "revenue": 225000 },
+            { "date": "Jun 2025", "impression": 360000, "click": 17000, "revenue": 220000 },
+            { "date": "Jul 2025", "impression": 400000, "click": 18500, "revenue": 250000 },
+            { "date": "Aug 2025", "impression": 390000, "click": 18000, "revenue": 245000 },
+            { "date": "Sep 2025", "impression": 410000, "click": 19000, "revenue": 260000 },
+            { "date": "Oct 2025", "impression": 420000, "click": 20000, "revenue": 270000 },
+            { "date": "Nov 2025", "impression": 430000, "click": 20500, "revenue": 280000 },
+            { "date": "Dec 2025", "impression": 450000, "click": 21000, "revenue": 290000 }
+        ]
+    }
+}

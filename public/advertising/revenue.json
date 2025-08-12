@@ -1,0 +1,29 @@
+{
+    "status": "success",
+    "message": "Revenue data fetched successfully",
+    "data": {
+        "week": [
+            { "month": "Mon", "revenue": 3200 },
+            { "month": "Tue", "revenue": 1500 },
+            { "month": "Wed", "revenue": 4000 },
+            { "month": "Thu", "revenue": 2500 },
+            { "month": "Fri", "revenue": 5000 },
+            { "month": "Sat", "revenue": 3000 },
+            { "month": "Sun", "revenue": 4500 }
+        ],
+        "month": [
+            { "month": "Jan", "revenue": 4500 },
+            { "month": "Feb", "revenue": 3200 },
+            { "month": "Mar", "revenue": 5200 },
+            { "month": "Apr", "revenue": 3800 },
+            { "month": "May", "revenue": 5800 },
+            { "month": "Jun", "revenue": 2700 },
+            { "month": "Jul", "revenue": 6000 },
+            { "month": "Aug", "revenue": 2000 },
+            { "month": "Sep", "revenue": 5500 },
+            { "month": "Oct", "revenue": 3200 },
+            { "month": "Nov", "revenue": 4800 },
+            { "month": "Dec", "revenue": 4300 }
+        ]
+    }
+}

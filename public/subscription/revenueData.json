@@ -1,0 +1,36 @@
+{
+    "status": "success",
+    "message": "Revenue data fetched successfully",
+    "data": {
+        "week": [
+            { "month": "Mon", "revenue": 120000 },
+            { "month": "Tue", "revenue": 150000 },
+            { "month": "Wed", "revenue": 110000 },
+            { "month": "Thu", "revenue": 180000 },
+            { "month": "Fri", "revenue": 90000 },
+            { "month": "Sat", "revenue": 160000 },
+            { "month": "Sun", "revenue": 140000 }
+        ],
+        "monthly": [
+            { "month": "Jan", "revenue": 470000 },
+            { "month": "Feb", "revenue": 460000 },
+            { "month": "Mar", "revenue": 400000 },
+            { "month": "Apr", "revenue": 350000 },
+            { "month": "May", "revenue": 420000 },
+            { "month": "Jun", "revenue": 450000 },
+            { "month": "Jul", "revenue": 430000 },
+            { "month": "Aug", "revenue": 470000 },
+            { "month": "Sep", "revenue": 520000 },
+            { "month": "Oct", "revenue": 580000 },
+            { "month": "Nov", "revenue": 590000 },
+            { "month": "Dec", "revenue": 540000 }
+        ],
+        "lifetime": [
+            { "month": "2019", "revenue": 250000 },
+            { "month": "2020", "revenue": 310000 },
+            { "month": "2021", "revenue": 420000 },
+            { "month": "2022", "revenue": 480000 },
+            { "month": "2023", "revenue": 500000 }
+        ]
+    }
+}
