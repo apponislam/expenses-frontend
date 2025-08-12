@@ -1,8 +1,8 @@
-import { ChartBarWithLines } from "@/components/rvenue-activity-chart";
+import { ChartBarWithLines } from "@/components/charts/rvenue-activity-chart";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { ChartBarMultiple } from "@/components/user-activity-chart";
-import { ChartPieDonut } from "@/components/user-distribution-chart";
+import { ChartBarMultiple } from "@/components/charts/user-activity-chart";
+import { ChartPieDonut } from "@/components/charts/user-distribution-chart";
 import Image from "next/image";
 
 const page = () => {

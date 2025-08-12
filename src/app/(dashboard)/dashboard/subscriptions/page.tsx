@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ChartBarWithLines } from "@/components/revenue-overview-chart";
-import SubscriptionsTable from "@/components/subscription-list-table";
+import { ChartBarWithLines } from "@/components/charts/revenue-overview-chart";
+import SubscriptionsTable from "@/components/tables/subscription-list-table";
 
 const page = () => {
     const tabClass = "px-4 py-[6px] text-black hover:bg-gray-100 text-[10px] inter-regular " + "data-[state=active]:!bg-[#4A90E2] data-[state=active]:!text-white";

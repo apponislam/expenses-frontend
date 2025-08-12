@@ -95,7 +95,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import UsersTable from "@/components/user-table";
+import UsersTable from "@/components/tables/user-table";
 
 const Page = () => {
     const [accountType, setAccountType] = useState<"All" | "Pro" | "Free">("All");
