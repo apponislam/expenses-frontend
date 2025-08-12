@@ -1,76 +1,60 @@
 import MessagesTableWithControls from "@/components/tables/rating-distribution-table";
 import { Progress } from "@/components/ui/progress";
+import { ApiResponse, FeedbackItem, MessageData, RatingItem } from "@/types/feedback";
 import { Star } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
-const page = () => {
-    const sampleMessages = [
-        {
-            user: "Sophia Bennett",
-            message: "Looking forward to the new update!",
-            registrationDate: "14/02/2023",
-        },
-        {
-            user: "Liam Carter",
-            message: "Having trouble with login, please assist.",
-            registrationDate: "03/07/2024",
-        },
-        {
-            user: "Olivia Hughes",
-            message: "Feature request: Dark mode support.",
-            registrationDate: "20/11/2022",
-        },
-        {
-            user: "Ethan Reed",
-            message: "Thanks for the quick response!",
-            registrationDate: "29/05/2024",
-        },
-        {
-            user: "Isabella Morris",
-            message: "App crashes sometimes when uploading files.",
-            registrationDate: "12/09/2023",
-        },
-        {
-            user: "Noah Turner",
-            message: "How do I reset my password?",
-            registrationDate: "06/01/2024",
-        },
-        {
-            user: "Ava Richardson",
-            message: "Great interface and smooth experience.",
-            registrationDate: "18/06/2022",
-        },
-        {
-            user: "Mason Wright",
-            message: "Waiting for your reply on the billing issue.",
-            registrationDate: "09/03/2024",
-        },
-        {
-            user: "Charlotte Foster",
-            message: "Can you add multi-language support?",
-            registrationDate: "27/08/2023",
-        },
-        {
-            user: "James Parker",
-            message: "Bug report: Notifications not showing.",
-            registrationDate: "15/04/2024",
-        },
-    ];
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
-    const ratingsData = [
-        { rating: 5, percent: 42 },
-        { rating: 4, percent: 27 },
-        { rating: 3, percent: 15 },
-        { rating: 2, percent: 9 },
-        { rating: 1, percent: 7 },
-    ];
+async function fetchMessages(): Promise<MessageData[] | null> {
+    try {
+        const res = await fetch(`${baseUrl}/feedback/sampleMessages.json`, {
+            cache: "no-store",
+        });
+        if (!res.ok) return null;
 
-    const feedbackData = [
-        { name: "John Doe", rating: 5, date: "04/07/2025" },
-        { name: "Jane Smith", rating: 4, date: "12/06/2025" },
-        { name: "Michael Johnson", rating: 3, date: "28/05/2025" },
-    ];
+        const json: ApiResponse<MessageData[]> = await res.json();
+        if (json.status === "success") {
+            return json.data;
+        }
+        return null;
+    } catch {
+        return null;
+    }
+}
+
+async function fetchRatings(): Promise<RatingItem[]> {
+    const res = await fetch(`${baseUrl}/feedback/ratings.json`, { cache: "no-store" });
+    const json: ApiResponse<RatingItem[]> = await res.json();
+    if (json.status === "success") return json.data;
+    return [];
+}
+
+async function fetchFeedback(): Promise<FeedbackItem[]> {
+    const res = await fetch(`${baseUrl}/feedback//feedback.json`, { cache: "no-store" });
+    const json: ApiResponse<FeedbackItem[]> = await res.json();
+    if (json.status === "success") return json.data;
+    return [];
+}
+
+const page = async () => {
+    const messages = await fetchMessages();
+    if (!messages) return <p className="p-5">Failed to load messages.</p>;
+
+    const ratingsData = await fetchRatings();
+
+    if (ratingsData.length === 0) return <p>No ratings found</p>;
+
+    const feedbackData = await fetchFeedback();
+
+    if (feedbackData.length === 0) return <p>No feedback available.</p>;
+
+    // const feedbackData = [
+    //     { name: "John Doe", rating: 5, date: "04/07/2025" },
+    //     { name: "Jane Smith", rating: 4, date: "12/06/2025" },
+    //     { name: "Michael Johnson", rating: 3, date: "28/05/2025" },
+    // ];
 
     return (
         <div className="mt-3 md:mt-6 mx-3">
@@ -98,7 +82,7 @@ const page = () => {
                 </div>
             </div>
 
-            <MessagesTableWithControls data={sampleMessages}></MessagesTableWithControls>
+            <MessagesTableWithControls data={messages}></MessagesTableWithControls>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 mb-3 md:mb-6">
                 <div className="bg-white p-[10px]  rounded-[12px] gap-3 md:gap-6">
@@ -107,19 +91,16 @@ const page = () => {
                         <div className="space-y-4">
                             {ratingsData.map((item) => (
                                 <div key={item.rating} className="flex items-center gap-4">
-                                    {/* Left side: Star + rating */}
                                     <div className="flex items-center gap-1 w-28">
                                         {[...Array(5)].map((_, idx) => (
                                             <Star key={idx} className={`w-5 h-5 ${idx < item.rating ? "text-[#FFE101] fill-[#FFE101]" : "text-[#FFE101]"}`} />
                                         ))}
                                     </div>
 
-                                    {/* Right side: Progress bar */}
                                     <div className="flex-1">
                                         <Progress value={item.percent} className="h-3 bg-[#D4D4D4] [&>div]:bg-[#FFE101]" />
                                     </div>
 
-                                    {/* Percentage text */}
                                     <span className="text-sm font-medium w-10 text-left inter-regular text-[12px]">{item.percent}%</span>
                                 </div>
                             ))}

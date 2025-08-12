@@ -1,0 +1,11 @@
+{
+    "status": "success",
+    "message": "Ratings data fetched",
+    "data": [
+        { "rating": 5, "percent": 42 },
+        { "rating": 4, "percent": 27 },
+        { "rating": 3, "percent": 15 },
+        { "rating": 2, "percent": 9 },
+        { "rating": 1, "percent": 7 }
+    ]
+}

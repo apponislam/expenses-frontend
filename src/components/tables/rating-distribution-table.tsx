@@ -11,7 +11,7 @@ import { Search } from "lucide-react";
 type MessageData = {
     user: string;
     message: string;
-    registrationDate: string; // Format: "DD/MM/YYYY"
+    registrationDate: string;
 };
 
 export default function MessagesTableWithControls({ data }: { data: MessageData[] }) {
