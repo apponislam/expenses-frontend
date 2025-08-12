@@ -3,6 +3,7 @@
 import { ChartColumnIncreasing, LaptopMinimalCheck, LayoutDashboard, Megaphone, Shield, UserRound } from "lucide-react";
 import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarTrigger } from "@/components/ui/sidebar";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 const items = [
     { title: "Dashboard", url: "/dashboard", icon: LayoutDashboard },
@@ -15,6 +16,7 @@ const items = [
 
 export function AppSidebar() {
     const pathname = usePathname();
+    const [collapsed, setCollapsed] = useState(false);
 
     return (
         <Sidebar
@@ -31,9 +33,11 @@ export function AppSidebar() {
             }
         >
             <SidebarContent className="h-full bg-white roboto">
-                <SidebarHeader className="sticky top-0 z-10 px-2 py-2 flex items-end justify-end bg-white">
-                    <SidebarTrigger className="hidden md:flex w-6 h-6 [&>svg]:!w-6 [&>svg]:!h-6" />
-                </SidebarHeader>
+                <div data-state={collapsed ? "collapsed" : "expanded"} className="transition-all duration-[600ms] ease-in-out">
+                    <SidebarHeader className={`sticky top-0 z-10 px-2 py-2 flex bg-white transition-all duration-[600ms] ease-in-out ${collapsed ? "items-center justify-center" : "items-end justify-end"}`}>
+                        <SidebarTrigger className="hidden md:flex w-6 h-6 [&>svg]:!w-6 [&>svg]:!h-6 cursor-pointer" onClick={() => setCollapsed((prev) => !prev)} aria-label="Toggle Sidebar" />
+                    </SidebarHeader>
+                </div>
 
                 <SidebarGroup className="bg-white">
                     <SidebarGroupContent className="bg-white">
