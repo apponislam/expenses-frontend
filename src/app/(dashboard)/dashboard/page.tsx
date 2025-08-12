@@ -28,7 +28,7 @@ const page = () => {
                             <DropdownMenuTrigger asChild>
                                 <Button variant="outline" className="text-white bg-[#4A90E2] rounded-[8px] hover:text-white hover:bg-[#4A90E2]">
                                     Monthly
-                                    <Image src="/downarrow.svg" width={24} height={24} alt="Downarrow" />
+                                    <Image src="/overview/downarrow.svg" width={24} height={24} alt="Downarrow" />
                                 </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent>
@@ -91,7 +91,7 @@ const page = () => {
                                 <DropdownMenuTrigger asChild>
                                     <Button variant="outline" className="text-white bg-[#4A90E2] rounded-[8px] hover:text-white hover:bg-[#4A90E2]">
                                         Monthly
-                                        <Image src="/downarrow.svg" width={24} height={24} alt="Downarrow" />
+                                        <Image src="/overview/downarrow.svg" width={24} height={24} alt="Downarrow" />
                                     </Button>
                                 </DropdownMenuTrigger>
                                 <DropdownMenuContent>

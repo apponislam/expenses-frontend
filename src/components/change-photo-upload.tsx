@@ -134,9 +134,6 @@ export default function FileUpload() {
         <div className={`relative ${isDragging ? "border-blue-500 bg-blue-50" : "border-gray-300"}`} onDragEnter={handleDragEnter} onDragLeave={handleDragLeave} onDragOver={handleDragOver} onDrop={handleDrop}>
             {previewUrl ? (
                 <div className="flex flex-col items-center justify-center">
-                    {/* <div className="relative w-full mb-4 rounded-full flex items-center justify-center">
-                        <Image src={previewUrl} alt="Preview" height={250} width={250} className="object-cover rounded-full" />
-                    </div> */}
                     <div className="relative h-[250px] w-[250px] mb-4 rounded-full overflow-hidden flex items-center justify-center">
                         <Image src={previewUrl} alt="Preview" height={250} width={250} className="h-full w-full object-cover rounded-full" />
                     </div>
@@ -158,7 +155,7 @@ export default function FileUpload() {
             ) : (
                 <>
                     <div className="flex items-center justify-center mb-3 md:mb-6 flex-col">
-                        <Image src="/changephotoimg.svg" alt="change photo" height={54} width={54} className="mb-3" />
+                        <Image src="/user/changephoto/changephotoimg.svg" alt="change photo" height={54} width={54} className="mb-3" />
                         <p className="text-center inter-regular text-[20px] text-[#535353] mb-3 md:mb-5">Drag & drop files here</p>
                         <p className="text-center inter-regular text-[20px] text-[#535353]">Or</p>
                     </div>
@@ -168,7 +165,7 @@ export default function FileUpload() {
                         <label htmlFor="file-upload">
                             <Button className="w-full p-[10px] h-auto text-center inter-regular text-[20px] flex gap-6 bg-[#4A90E2] hover:bg-[#4A90E2] cursor-pointer" asChild>
                                 <div>
-                                    <Image src="/uploadphotobtn.svg" alt="Upload Photo Button" width={24} height={24} />
+                                    <Image src="/user/changephoto/uploadphotobtn.svg" alt="Upload Photo Button" width={24} height={24} />
                                     Upload Photo
                                 </div>
                             </Button>

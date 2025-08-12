@@ -77,7 +77,7 @@ const page = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 md:gap-6 mb-3 md:mb-6">
                 <div className="bg-white p-[10px] rounded-[12px] text-[#454B60]">
                     <div className="flex justify-between mb-6">
-                        <Image src="/icons/icon1.svg" alt="Subscription icons" width={44} height={44}></Image>
+                        <Image src="/subscription/icon1.svg" alt="Subscription icons" width={44} height={44}></Image>
                         <p className="roboto-regular text-[14px] ">12%</p>
                     </div>
                     <h2 className="roboto-semibold text-[32px]">182</h2>
@@ -85,7 +85,7 @@ const page = () => {
                 </div>
                 <div className="bg-white p-[10px] rounded-[12px] text-[#454B60]">
                     <div className="flex justify-between mb-6">
-                        <Image src="/icons/icon2.svg" alt="Subscription icons" width={44} height={44}></Image>
+                        <Image src="/subscription/icon2.svg" alt="Subscription icons" width={44} height={44}></Image>
                         <p className="roboto-regular text-[14px] ">12%</p>
                     </div>
                     <h2 className="roboto-semibold text-[32px]">164</h2>
@@ -93,7 +93,7 @@ const page = () => {
                 </div>
                 <div className="bg-white p-[10px] rounded-[12px] text-[#454B60]">
                     <div className="flex justify-between mb-6">
-                        <Image src="/icons/icon3.svg" alt="Subscription icons" width={44} height={44}></Image>
+                        <Image src="/subscription/icon3.svg" alt="Subscription icons" width={44} height={44}></Image>
                         <p className="roboto-regular text-[14px] ">12%</p>
                     </div>
                     <h2 className="roboto-semibold text-[32px]">89</h2>
@@ -101,7 +101,7 @@ const page = () => {
                 </div>
                 <div className="bg-white p-[10px] rounded-[12px] text-[#454B60]">
                     <div className="flex justify-between mb-6">
-                        <Image src="/icons/icon4.svg" alt="Subscription icons" width={44} height={44}></Image>
+                        <Image src="/subscription/icon4.svg" alt="Subscription icons" width={44} height={44}></Image>
                         <p className="roboto-regular text-[14px] ">12%</p>
                     </div>
                     <h2 className="roboto-semibold text-[32px]">24.8%</h2>
@@ -148,7 +148,7 @@ const page = () => {
                 <div className="flex flex-col gap-3 md:gap-6 xl:gap-8">
                     <div className="bg-white p-[10px] rounded-[12px] text-[#454B60]">
                         <div className="flex justify-between mb-6">
-                            <Image src="/icons/icon3.svg" alt="Subscription icons" width={44} height={44}></Image>
+                            <Image src="/subscription/icon3.svg" alt="Subscription icons" width={44} height={44}></Image>
                             <p className="roboto-regular text-[14px] ">12%</p>
                         </div>
                         <h2 className="roboto-semibold text-[32px]">$47,892</h2>
@@ -156,7 +156,7 @@ const page = () => {
                     </div>
                     <div className="bg-white p-[10px] rounded-[12px] text-[#454B60]">
                         <div className="flex justify-between mb-6">
-                            <Image src="/icons/icon4.svg" alt="Subscription icons" width={44} height={44}></Image>
+                            <Image src="/subscription/icon4.svg" alt="Subscription icons" width={44} height={44}></Image>
                             <p className="roboto-regular text-[14px] ">12%</p>
                         </div>
                         <h2 className="roboto-semibold text-[32px]">$47,892</h2>

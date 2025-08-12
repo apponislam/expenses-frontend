@@ -6,6 +6,7 @@ import { MoreHorizontal } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 type AccountType = "All" | "Pro" | "Free";
 type UserAccount = "Pro" | "Free";
@@ -78,9 +79,11 @@ export default function UsersTable({
                                         </Button>
                                     </DropdownMenuTrigger>
                                     <DropdownMenuContent align="start" className="p-0 rounded-[8px] border-0 border-b border-[#454B6066]">
-                                        <DropdownMenuItem onClick={() => alert(`View profile of ${user.name}`)} className="p-[10px] roboto-regular text-[14px] border-none">
-                                            <Image alt="blueeye" width={24} height={24} src="/blueeye.svg" />
-                                            View Profile
+                                        <DropdownMenuItem className="p-[10px] roboto-regular text-[14px] border-none">
+                                            <Link href="/dashboard/user/userinfo" className="flex items-center gap-3">
+                                                <Image alt="blueeye" width={24} height={24} src="/blueeye.svg" />
+                                                View Profile
+                                            </Link>
                                         </DropdownMenuItem>
                                     </DropdownMenuContent>
                                 </DropdownMenu>
