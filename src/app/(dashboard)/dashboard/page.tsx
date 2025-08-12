@@ -1,9 +1,7 @@
 import { ChartBarWithLines } from "@/components/charts/rvenue-activity-chart";
-import { Button } from "@/components/ui/button";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { ChartBarMultiple } from "@/components/charts/user-activity-chart";
-import { ChartPieDonut } from "@/components/charts/user-distribution-chart";
-import Image from "next/image";
+import { UserDistribution } from "@/components/userDestribution";
+import MonthlyRevenueCard from "@/components/MonthlyRevenueCard";
 
 const page = () => {
     return (
@@ -20,29 +18,7 @@ const page = () => {
                     <h2 className="inter-medium mb-4 text-[32px]">24,582</h2>
                     <h6 className="text-right text-[#00A62C] inter-regular text-[14px] mb-3">+12% this month</h6>
                 </div>
-
-                <div className="bg-white p-[10px] rounded-[12px] md:col-span-2 xl:col-span-6">
-                    <div className="flex items-center justify-between mb-3 md:mb-8">
-                        <p className="text-[20px] inter-medium mb-3">Pro Users</p>
-                        <DropdownMenu>
-                            <DropdownMenuTrigger asChild>
-                                <Button variant="outline" className="text-white bg-[#4A90E2] rounded-[8px] hover:text-white hover:bg-[#4A90E2]">
-                                    Monthly
-                                    <Image src="/overview/downarrow.svg" width={24} height={24} alt="Downarrow" />
-                                </Button>
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent>
-                                {["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"].map((month) => (
-                                    <DropdownMenuItem key={month}>{month}</DropdownMenuItem>
-                                ))}
-                            </DropdownMenuContent>
-                        </DropdownMenu>
-                    </div>
-                    <div className="flex items-center justify-between">
-                        <h2 className="inter-medium text-[32px]">24,582</h2>
-                        <h6 className="text-right text-[#00A62C] inter-regular text-[14px] mb-3">+12% this month</h6>
-                    </div>
-                </div>
+                <MonthlyRevenueCard></MonthlyRevenueCard>
             </div>
             <div className="bg-white p-5 rounded-[12px] mb-3 md:mb-8">
                 <div className=" md:flex justify-between items-center mb-[14px]">
@@ -64,7 +40,7 @@ const page = () => {
                 </div>
             </div>
             <div className="md:flex items-stretch gap-3 md:gap-5 mb-3 md:mb-6">
-                <div className="bg-white p-4 md:p-5 rounded-[12px] flex-1 mb-3">
+                <div className="bg-white p-4 md:p-5 rounded-[12px] flex-1 mb-3 md:mb-0">
                     <div className="md:flex justify-between items-center mb-3 md:mb-[14px]">
                         <p className="inter-medium text-[14px] text-[#454B60] mb-3 md:mb-0">Revenue</p>
                         <div className="md:flex items-center gap-3 md:gap-[14px]">
@@ -83,39 +59,8 @@ const page = () => {
                         <ChartBarWithLines></ChartBarWithLines>
                     </div>
                 </div>
-                <div className="bg-white p-5 rounded-[12px] md:w-[350px] flex flex-col">
-                    <div className="flex-1 flex flex-col items-center justify-between">
-                        <div className="flex justify-between items-center w-full">
-                            <p className="text-[20px] inter-medium">Pro Users</p>
-                            <DropdownMenu>
-                                <DropdownMenuTrigger asChild>
-                                    <Button variant="outline" className="text-white bg-[#4A90E2] rounded-[8px] hover:text-white hover:bg-[#4A90E2]">
-                                        Monthly
-                                        <Image src="/overview/downarrow.svg" width={24} height={24} alt="Downarrow" />
-                                    </Button>
-                                </DropdownMenuTrigger>
-                                <DropdownMenuContent>
-                                    {["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"].map((month) => (
-                                        <DropdownMenuItem key={month}>{month}</DropdownMenuItem>
-                                    ))}
-                                </DropdownMenuContent>
-                            </DropdownMenu>
-                        </div>
-                        <div className="w-full">
-                            <ChartPieDonut></ChartPieDonut>
-                        </div>
-                        <div className="w-full flex items-center justify-between">
-                            <div className="flex items-center gap-3">
-                                <div className="w-4 h-4 bg-[#4A90E2]"></div>
-                                <p className="inter-regular text-[14px]">Pro User</p>
-                            </div>
-                            <div className="flex items-center gap-3">
-                                <div className="w-4 h-4 bg-[#AFDBBB]"></div>
-                                <p className="inter-regular text-[14px]">Free User</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                <UserDistribution></UserDistribution>
             </div>
         </div>
     );

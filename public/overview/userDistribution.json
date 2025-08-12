@@ -1,0 +1,54 @@
+{
+    "status": "success",
+    "message": "User distribution data fetched successfully",
+    "data": {
+        "January": [
+            { "userType": "Pro User", "users": 10, "fill": "#4A90E2" },
+            { "userType": "Free User", "users": 100, "fill": "#D9D9D9" }
+        ],
+        "February": [
+            { "userType": "Pro User", "users": 35, "fill": "#4A90E2" },
+            { "userType": "Free User", "users": 120, "fill": "#D9D9D9" }
+        ],
+        "March": [
+            { "userType": "Pro User", "users": 33, "fill": "#4A90E2" },
+            { "userType": "Free User", "users": 115, "fill": "#D9D9D9" }
+        ],
+        "April": [
+            { "userType": "Pro User", "users": 28, "fill": "#4A90E2" },
+            { "userType": "Free User", "users": 110, "fill": "#D9D9D9" }
+        ],
+        "May": [
+            { "userType": "Pro User", "users": 40, "fill": "#4A90E2" },
+            { "userType": "Free User", "users": 130, "fill": "#D9D9D9" }
+        ],
+        "June": [
+            { "userType": "Pro User", "users": 45, "fill": "#4A90E2" },
+            { "userType": "Free User", "users": 135, "fill": "#D9D9D9" }
+        ],
+        "July": [
+            { "userType": "Pro User", "users": 50, "fill": "#4A90E2" },
+            { "userType": "Free User", "users": 140, "fill": "#D9D9D9" }
+        ],
+        "August": [
+            { "userType": "Pro User", "users": 48, "fill": "#4A90E2" },
+            { "userType": "Free User", "users": 138, "fill": "#D9D9D9" }
+        ],
+        "September": [
+            { "userType": "Pro User", "users": 52, "fill": "#4A90E2" },
+            { "userType": "Free User", "users": 145, "fill": "#D9D9D9" }
+        ],
+        "October": [
+            { "userType": "Pro User", "users": 55, "fill": "#4A90E2" },
+            { "userType": "Free User", "users": 150, "fill": "#D9D9D9" }
+        ],
+        "November": [
+            { "userType": "Pro User", "users": 60, "fill": "#4A90E2" },
+            { "userType": "Free User", "users": 155, "fill": "#D9D9D9" }
+        ],
+        "December": [
+            { "userType": "Pro User", "users": 58, "fill": "#4A90E2" },
+            { "userType": "Free User", "users": 152, "fill": "#D9D9D9" }
+        ]
+    }
+}

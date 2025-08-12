@@ -1,0 +1,18 @@
+{
+    "status": "success",
+    "message": "User activity data fetched successfully",
+    "data": [
+        { "month": "January", "prouser": 4700, "freeuser": 800 },
+        { "month": "February", "prouser": 3050, "freeuser": 2000 },
+        { "month": "March", "prouser": 2370, "freeuser": 1200 },
+        { "month": "April", "prouser": 730, "freeuser": 1900 },
+        { "month": "May", "prouser": 2090, "freeuser": 1300 },
+        { "month": "June", "prouser": 2140, "freeuser": 1400 },
+        { "month": "July", "prouser": 1980, "freeuser": 1600 },
+        { "month": "August", "prouser": 2250, "freeuser": 1500 },
+        { "month": "September", "prouser": 2450, "freeuser": 1800 },
+        { "month": "October", "prouser": 2750, "freeuser": 2100 },
+        { "month": "November", "prouser": 3000, "freeuser": 1900 },
+        { "month": "December", "prouser": 2600, "freeuser": 1700 }
+    ]
+}

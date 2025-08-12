@@ -3,42 +3,50 @@
 import { ComposedChart, Line, Bar, XAxis, YAxis, Tooltip as RechartsTooltip, ResponsiveContainer } from "recharts";
 
 import { ChartContainer, ChartTooltipContent, ChartConfig } from "@/components/ui/chart";
+import { useEffect, useState } from "react";
+import { overviewMonthlyData } from "@/types/overview";
 
 export const description = "Bar + Two Lines Chart (Revenue Overview)";
-
-// Updated Data
-const chartData = [
-    { month: "Jan", revenue: 470000, subscriptions: 0, advertisements: 0 },
-    { month: "Feb", revenue: 460000, subscriptions: 305000, advertisements: 450000 },
-    { month: "Mar", revenue: 400000, subscriptions: 237000, advertisements: 357000 },
-    { month: "Apr", revenue: 350000, subscriptions: 73000, advertisements: 263000 },
-    { month: "May", revenue: 420000, subscriptions: 209000, advertisements: 339000 },
-    { month: "Jun", revenue: 450000, subscriptions: 214000, advertisements: 354000 },
-    { month: "Jul", revenue: 430000, subscriptions: 198000, advertisements: 358000 },
-    { month: "Aug", revenue: 470000, subscriptions: 225000, advertisements: 375000 },
-    { month: "Sep", revenue: 520000, subscriptions: 245000, advertisements: 425000 },
-    { month: "Oct", revenue: 580000, subscriptions: 275000, advertisements: 485000 },
-    { month: "Nov", revenue: 590000, subscriptions: 300000, advertisements: 490000 },
-    { month: "Dec", revenue: 540000, subscriptions: 260000, advertisements: 430000 },
-];
 
 // Config for labels & colors
 const chartConfig = {
     revenue: {
         label: "Total Revenue",
-        color: "#86B5EC", // Indigo bar
+        color: "#86B5EC",
     },
     subscriptions: {
         label: "Subscriptions Revenue",
-        color: "#FACC15", // Yellow line
+        color: "#FACC15",
     },
     advertisements: {
         label: "Advertisement Revenue",
-        color: "#22C55E", // Green line
+        color: "#22C55E",
     },
 } satisfies ChartConfig;
 
 export function ChartBarWithLines() {
+    const [chartData, setChartData] = useState<overviewMonthlyData[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        fetch("/overview/revenue-data.json")
+            .then((res) => res.json())
+            .then((res) => {
+                if (res.status === "success" && Array.isArray(res.data)) {
+                    setChartData(res.data);
+                    setError(null);
+                } else {
+                    setError("Invalid data format");
+                }
+            })
+            .catch((err) => setError(err.message))
+            .finally(() => setLoading(false));
+    }, []);
+
+    if (loading) return <div>Loading chart data...</div>;
+    if (error) return <div>Error loading data: {error}</div>;
+
     return (
         <ChartContainer config={chartConfig}>
             <div className="h-[190px]">
