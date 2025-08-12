@@ -16,20 +16,28 @@ A React & Next.js client application for managing expenses, featuring charts, fo
 
 1. Clone the repo:
 
-{bash}
+```bash
 git clone <your-repo-url>
 cd expenses-client
-{bash}
+```
 
 2. Install dependencies:
 
-{bash}
+```bash
 npm install
 
 # or
 
 yarn install
-{bash}
+```
+
+## Environment Variables
+
+Create a `.env.local` file in the root of your project and add the following:
+
+```bash
+NEXT_PUBLIC_BASE_URL="http://localhost:3000"
+```
 
 ## Available Scripts
 
@@ -42,9 +50,9 @@ yarn install
 
 Start the development server and open [http://localhost:3000](http://localhost:3000):
 
-{bash}
+```bash
 npm run dev
-{bash}
+```
 
 ## Folder Structure
 
@@ -57,9 +65,9 @@ npm run dev
 
 This project uses ESLint configured for Next.js. Run lint with:
 
-{bash}
+```bash
 npm run lint
-{bash}
+```
 
 ---
 
