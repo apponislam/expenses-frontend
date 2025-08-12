@@ -1,5 +1,11 @@
 import FileUpload from "@/components/change-photo-upload";
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Change User Photo - Expenses Client",
+    description: "Update your profile picture on Expenses Client.",
+};
 
 const page = () => {
     return (

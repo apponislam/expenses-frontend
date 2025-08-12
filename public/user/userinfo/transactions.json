@@ -1,0 +1,46 @@
+{
+    "status": "success",
+    "message": "Transactions fetched successfully",
+    "data": [
+        {
+            "transactionId": "TXN100001",
+            "planTitle": "3 months",
+            "email": "john.doe@example.com",
+            "amount": 59.99,
+            "joinDate": "07/04/2025",
+            "endDate": "07/07/2025"
+        },
+        {
+            "transactionId": "TXN100002",
+            "planTitle": "1 month",
+            "email": "jane.smith@example.com",
+            "amount": 19.99,
+            "joinDate": "06/07/2025",
+            "endDate": "07/07/2025"
+        },
+        {
+            "transactionId": "TXN100003",
+            "planTitle": "3 months",
+            "email": "alex.jones@example.com",
+            "amount": 59.99,
+            "joinDate": "04/07/2025",
+            "endDate": "07/07/2025"
+        },
+        {
+            "transactionId": "TXN100004",
+            "planTitle": "1 month",
+            "email": "emma.wilson@example.com",
+            "amount": 19.99,
+            "joinDate": "07/06/2025",
+            "endDate": "07/07/2025"
+        },
+        {
+            "transactionId": "TXN100005",
+            "planTitle": "3 months",
+            "email": "liam.brown@example.com",
+            "amount": 59.91,
+            "joinDate": "07/05/2025",
+            "endDate": "07/07/2025"
+        }
+    ]
+}

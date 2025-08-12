@@ -1,6 +1,12 @@
 import ChangeNameForm from "@/components/forms/changename-form";
 import Image from "next/image";
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Change User Name - Expenses Client",
+    description: "Update your display name on Expenses Client.",
+};
 
 const page = () => {
     return (

@@ -2,6 +2,12 @@ import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ChartArea } from "@/components/charts/revenue-trends-chart";
 import MetricsTable from "@/components/tables/advertise-list-table";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Advertising - Expenses Client",
+    description: "View and manage your advertising campaigns on Expenses Client.",
+};
 
 const tabClass = "px-4 py-[6px] text-black hover:bg-gray-100 text-[10px] inter-regular " + "data-[state=active]:!bg-[#4A90E2] data-[state=active]:!text-white";
 

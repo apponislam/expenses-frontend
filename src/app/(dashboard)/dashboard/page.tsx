@@ -2,6 +2,12 @@ import { ChartBarWithLines } from "@/components/charts/rvenue-activity-chart";
 import { ChartBarMultiple } from "@/components/charts/user-activity-chart";
 import { UserDistribution } from "@/components/userDestribution";
 import MonthlyRevenueCard from "@/components/MonthlyRevenueCard";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Dashboard - Expenses Client",
+    description: "Overview of your expenses and activities on Expenses Client dashboard.",
+};
 
 const page = () => {
     return (

@@ -4,6 +4,12 @@ import { ApiResponse, FeedbackItem, MessageData, RatingItem } from "@/types/feed
 import { Star } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Feedback - Expenses Client",
+    description: "Read and submit feedback about Expenses Client.",
+};
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
