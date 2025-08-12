@@ -17,7 +17,7 @@ A React & Next.js client application for managing expenses, featuring charts, fo
 1. Clone the repo:
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/apponislam/expenses-frontend.git
 cd expenses-client
 ```
 
