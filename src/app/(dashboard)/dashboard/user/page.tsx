@@ -11,7 +11,6 @@ const Page = () => {
 
     return (
         <div className="mt-3 md:mt-6 mx-3">
-            {/* Top Stats */}
             <div className="grid grid-cols-1 xl:grid-cols-3 gap-3 md:gap-5 xl:gap-8 mb-3 md:mb-6">
                 {[
                     { label: "Total User", value: "2,547" },
@@ -78,8 +77,6 @@ const Page = () => {
                     </DropdownMenu>
                 </div>
 
-                {/* Users Table */}
-                {/* <UsersTable /> */}
                 <UsersTable accountType={accountType} />
             </div>
         </div>

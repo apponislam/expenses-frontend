@@ -1,0 +1,16 @@
+{
+    "status": "success",
+    "message": "User data fetched successfully",
+    "data": [
+        { "name": "Sophia Bennett", "email": "sophia.bennett@example.com", "accountType": "Pro", "registerDate": "14/02/2023" },
+        { "name": "Liam Carter", "email": "liam.carter@example.com", "accountType": "Free", "registerDate": "03/07/2024" },
+        { "name": "Olivia Hughes", "email": "olivia.hughes@example.com", "accountType": "Pro", "registerDate": "20/11/2022" },
+        { "name": "Ethan Reed", "email": "ethan.reed@example.com", "accountType": "Free", "registerDate": "29/05/2024" },
+        { "name": "Isabella Morris", "email": "isabella.morris@example.com", "accountType": "Pro", "registerDate": "12/09/2023" },
+        { "name": "Noah Turner", "email": "noah.turner@example.com", "accountType": "Free", "registerDate": "06/01/2024" },
+        { "name": "Ava Richardson", "email": "ava.richardson@example.com", "accountType": "Pro", "registerDate": "18/06/2022" },
+        { "name": "Mason Wright", "email": "mason.wright@example.com", "accountType": "Free", "registerDate": "09/03/2024" },
+        { "name": "Charlotte Foster", "email": "charlotte.foster@example.com", "accountType": "Pro", "registerDate": "27/08/2023" },
+        { "name": "James Parker", "email": "james.parker@example.com", "accountType": "Free", "registerDate": "15/04/2024" }
+    ]
+}

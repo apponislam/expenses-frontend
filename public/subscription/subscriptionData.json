@@ -1,0 +1,27 @@
+{
+    "status": "success",
+    "message": "Subscription data fetched successfully",
+    "data": {
+        "week": [
+            { "user": "Fatima Noor", "plan": "Education", "date": "07/07/2025", "reason": "07/07/2025", "admin": "Admin User" },
+            { "user": "Md. Appon Islam", "plan": "Basic", "date": "07/07/2025", "reason": "07/07/2025", "admin": "Admin User" },
+            { "user": "Sara Khan", "plan": "Pro", "date": "06/07/2025", "reason": "06/07/2025", "admin": "Admin User" },
+            { "user": "Imran Hossain", "plan": "Free", "date": "05/07/2025", "reason": "05/07/2025", "admin": "Admin User" },
+            { "user": "Nadia Rahman", "plan": "Education", "date": "04/07/2025", "reason": "04/07/2025", "admin": "Admin User" }
+        ],
+        "monthly": [
+            { "user": "Sara Ahmed", "plan": "Pro", "date": "07/07/2025", "reason": "07/07/2025", "admin": "Admin User" },
+            { "user": "John Doe", "plan": "Education", "date": "07/07/2025", "reason": "07/07/2025", "admin": "Admin User" },
+            { "user": "Alice Green", "plan": "Basic", "date": "01/07/2025", "reason": "01/07/2025", "admin": "Admin User" },
+            { "user": "Michael Scott", "plan": "Pro", "date": "02/07/2025", "reason": "02/07/2025", "admin": "Admin User" },
+            { "user": "Jessica Lee", "plan": "Education", "date": "03/07/2025", "reason": "03/07/2025", "admin": "Admin User" }
+        ],
+        "lifetime": [
+            { "user": "Lina Rahman", "plan": "Basic", "date": "07/07/2025", "reason": "07/07/2025", "admin": "Admin User" },
+            { "user": "Alex Kim", "plan": "Pro", "date": "07/07/2025", "reason": "07/07/2025", "admin": "Admin User" },
+            { "user": "David Brown", "plan": "Education", "date": "07/07/2025", "reason": "07/07/2025", "admin": "Admin User" },
+            { "user": "Emma Watson", "plan": "Basic", "date": "07/07/2025", "reason": "07/07/2025", "admin": "Admin User" },
+            { "user": "Chris Evans", "plan": "Pro", "date": "07/07/2025", "reason": "07/07/2025", "admin": "Admin User" }
+        ]
+    }
+}
