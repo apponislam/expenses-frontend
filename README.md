@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Expenses Client
 
-## Getting Started
+A React & Next.js client application for managing expenses, featuring charts, forms, and UI built with Radix UI, Tailwind CSS, and Recharts.
 
-First, run the development server:
+## Technologies
 
-```bash
+-   Next.js 15.4.5
+-   React 19.1.0
+-   Tailwind CSS 4
+-   Radix UI components (`@radix-ui/react-*`)
+-   Recharts for charts
+-   React Hook Form with Zod validation
+-   Lucide React icons
+
+## Installation
+
+1. Clone the repo:
+
+{bash}
+git clone <your-repo-url>
+cd expenses-client
+{bash}
+
+2. Install dependencies:
+
+{bash}
+npm install
+
+# or
+
+yarn install
+{bash}
+
+## Available Scripts
+
+-   `npm run dev` — Start the development server
+-   `npm run build` — Build the production app
+-   `npm run start` — Run the production build
+-   `npm run lint` — Run ESLint checks
+
+## Usage
+
+Start the development server and open [http://localhost:3000](http://localhost:3000):
+
+{bash}
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+{bash}
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Folder Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+-   `pages/` - Next.js pages
+-   `components/` - Reusable React components
+-   `public/` - Static assets
+-   `styles/` - Tailwind CSS and global styles
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Linting & Formatting
 
-## Learn More
+This project uses ESLint configured for Next.js. Run lint with:
 
-To learn more about Next.js, take a look at the following resources:
+{bash}
+npm run lint
+{bash}
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Live URLs Reference
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Page Name            | URL                                                                   |
+| -------------------- | --------------------------------------------------------------------- |
+| Login                | https://expenses-frontend-tawny.vercel.app/login                      |
+| Forgot Password      | https://expenses-frontend-tawny.vercel.app/forgot-pass                |
+| New Password         | https://expenses-frontend-tawny.vercel.app/new-pass                   |
+| Dashboard Home       | https://expenses-frontend-tawny.vercel.app/dashboard                  |
+| User Profile         | https://expenses-frontend-tawny.vercel.app/dashboard/user             |
+| Change User Photo    | https://expenses-frontend-tawny.vercel.app/dashboard/user/changephoto |
+| Change User Name     | https://expenses-frontend-tawny.vercel.app/dashboard/user/changename  |
+| User Info            | https://expenses-frontend-tawny.vercel.app/dashboard/user/userinfo    |
+| Subscriptions        | https://expenses-frontend-tawny.vercel.app/dashboard/subscriptions    |
+| Advertising          | https://expenses-frontend-tawny.vercel.app/dashboard/advertising      |
+| Feedback             | https://expenses-frontend-tawny.vercel.app/dashboard/feedback         |
+| Terms and Conditions | https://expenses-frontend-tawny.vercel.app/dashboard/terms            |
+| Notifications        | https://expenses-frontend-tawny.vercel.app/dashboard/notifications    |

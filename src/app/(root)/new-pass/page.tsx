@@ -1,6 +1,12 @@
 import ResetPasswordForm from "@/components/forms/Reset-pass-form";
 import Image from "next/image";
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "New Password - Expenses Client",
+    description: "Set a new password for your Expenses Client account.",
+};
 
 const page = () => {
     return (

@@ -1,6 +1,12 @@
 import LoginForm from "@/components/forms/Login-form";
+import { Metadata } from "next";
 import Image from "next/image";
 import React from "react";
+
+export const metadata: Metadata = {
+    title: "Login - Expenses Client",
+    description: "Securely login to your Expenses Client account.",
+};
 
 const page = () => {
     return (

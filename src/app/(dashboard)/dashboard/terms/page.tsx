@@ -1,6 +1,12 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Terms and Conditions - Expenses Client",
+    description: "Read the terms and conditions of using Expenses Client.",
+};
 
 const page = () => {
     return (

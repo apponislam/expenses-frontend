@@ -1,52 +1,35 @@
 import { Button } from "@/components/ui/button";
 import TransactionsTable from "@/components/tables/userinfo-transection-table";
 import Image from "next/image";
+import type { Metadata } from "next";
+import { ApiResponse2, Transaction } from "@/types/users";
 
-const page = () => {
-    const transactions = [
-        {
-            transactionId: "TXN100001",
-            planTitle: "3 months",
-            email: "john.doe@example.com",
-            amount: 59.99,
-            joinDate: "07/04/2025",
-            endDate: "07/07/2025",
-        },
-        {
-            transactionId: "TXN100002",
-            planTitle: "1 month",
-            email: "jane.smith@example.com",
-            amount: 19.99,
-            joinDate: "06/07/2025",
-            endDate: "07/07/2025",
-        },
-        {
-            transactionId: "TXN100003",
-            planTitle: "3 months",
-            email: "alex.jones@example.com",
-            amount: 59.99,
-            joinDate: "04/07/2025",
-            endDate: "07/07/2025",
-        },
-        {
-            transactionId: "TXN100004",
-            planTitle: "1 month",
-            email: "emma.wilson@example.com",
-            amount: 19.99,
-            joinDate: "07/06/2025",
-            endDate: "07/07/2025",
-        },
-        {
-            transactionId: "TXN100005",
-            planTitle: "3 months",
-            email: "liam.brown@example.com",
-            amount: 59.99,
-            joinDate: "07/05/2025",
-            endDate: "07/07/2025",
-        },
-    ];
+export const metadata: Metadata = {
+    title: "User Info - Expenses Client",
+    description: "View and update your personal information on Expenses Client.",
+};
 
-    console.log(transactions);
+async function fetchTransactions(): Promise<Transaction[] | null> {
+    try {
+        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+        const res = await fetch(`${baseUrl}/user/userinfo/transactions.json`, {
+            cache: "no-store",
+        });
+        const json: ApiResponse2 = await res.json();
+        if (json.status === "success") return json.data;
+        return null;
+    } catch (e) {
+        console.log(e);
+        return null;
+    }
+}
+
+const page = async () => {
+    const transactions = await fetchTransactions();
+
+    if (!transactions) {
+        return <p className="p-5">Failed to load transactions.</p>;
+    }
 
     return (
         <div className="p-3 mt-3 md:mt-6">

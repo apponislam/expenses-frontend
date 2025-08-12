@@ -4,13 +4,19 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ChartBarWithLines } from "@/components/charts/revenue-overview-chart";
 import SubscriptionsTable from "@/components/tables/subscription-list-table";
 import { ApiResponse, RevenueData, SubscriptionApiResponse } from "@/types/subscription";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Subscriptions - Expenses Client",
+    description: "Manage your subscriptions and billing on Expenses Client.",
+};
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
 async function fetchRevenueData(): Promise<RevenueData | null> {
     try {
         const res = await fetch(`${baseUrl}/subscription/revenueData.json`, {
-            cache: "no-store", // ensure fresh data on every request, adjust if needed
+            cache: "no-store",
         });
 
         console.log(res);
