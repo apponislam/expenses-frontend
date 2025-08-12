@@ -1,0 +1,9 @@
+{
+    "status": "success",
+    "message": "Feedback data fetched",
+    "data": [
+        { "name": "John Doe", "rating": 5, "date": "04/07/2025" },
+        { "name": "Jane Smith", "rating": 4, "date": "12/06/2025" },
+        { "name": "Michael Johnson", "rating": 3, "date": "28/05/2025" }
+    ]
+}
