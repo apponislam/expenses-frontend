@@ -1,0 +1,18 @@
+{
+    "status": "success",
+    "message": "Monthly revenue and subscriptions data fetched successfully",
+    "data": [
+        { "month": "Jan", "revenue": 470000, "subscriptions": 0, "advertisements": 0 },
+        { "month": "Feb", "revenue": 460000, "subscriptions": 305000, "advertisements": 450000 },
+        { "month": "Mar", "revenue": 400000, "subscriptions": 237000, "advertisements": 357000 },
+        { "month": "Apr", "revenue": 350000, "subscriptions": 73000, "advertisements": 263000 },
+        { "month": "May", "revenue": 420000, "subscriptions": 209000, "advertisements": 339000 },
+        { "month": "Jun", "revenue": 450000, "subscriptions": 214000, "advertisements": 354000 },
+        { "month": "Jul", "revenue": 430000, "subscriptions": 198000, "advertisements": 358000 },
+        { "month": "Aug", "revenue": 470000, "subscriptions": 225000, "advertisements": 375000 },
+        { "month": "Sep", "revenue": 520000, "subscriptions": 245000, "advertisements": 425000 },
+        { "month": "Oct", "revenue": 580000, "subscriptions": 275000, "advertisements": 485000 },
+        { "month": "Nov", "revenue": 590000, "subscriptions": 300000, "advertisements": 490000 },
+        { "month": "Dec", "revenue": 540000, "subscriptions": 260000, "advertisements": 430000 }
+    ]
+}

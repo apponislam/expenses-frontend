@@ -1,0 +1,18 @@
+{
+    "status": "success",
+    "message": "Monthly revenue data fetched successfully",
+    "data": {
+        "January": { "amount": 18000, "changePercent": 5 },
+        "February": { "amount": 19000, "changePercent": 6 },
+        "March": { "amount": 21000, "changePercent": 10 },
+        "April": { "amount": 19500, "changePercent": -7 },
+        "May": { "amount": 22000, "changePercent": 13 },
+        "June": { "amount": 24582, "changePercent": 12 },
+        "July": { "amount": 25000, "changePercent": 1.5 },
+        "August": { "amount": 26000, "changePercent": 4 },
+        "September": { "amount": 27000, "changePercent": 3.8 },
+        "October": { "amount": 28000, "changePercent": 3.7 },
+        "November": { "amount": 28500, "changePercent": 1.7 },
+        "December": { "amount": 29000, "changePercent": 1.8 }
+    }
+}
